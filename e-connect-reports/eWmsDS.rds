@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RptDataSource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="eWmsDS">
+  <ConnectionProperties>
+    <Extension>SQL</Extension>
+    <ConnectString>Data Source=172.31.48.15;Initial Catalog=eWms</ConnectString>
+    <Prompt>Specify a user name and password for data source eWmsDS:</Prompt>
+  </ConnectionProperties>
+  <DataSourceID>e8e48809-0117-4e1f-93a9-609abd216424</DataSourceID>
+</RptDataSource>

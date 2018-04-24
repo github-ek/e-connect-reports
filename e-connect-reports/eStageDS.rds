@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RptDataSource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="eStageDS">
+  <ConnectionProperties>
+    <Extension>SQL</Extension>
+    <ConnectString>Data Source=172.31.48.15;Initial Catalog=eStage</ConnectString>
+  </ConnectionProperties>
+  <DataSourceID>3e275c12-f32f-40ce-bd47-0f61fb3deb5d</DataSourceID>
+</RptDataSource>

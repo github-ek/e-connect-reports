@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RptDataSource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="eConfigDS">
+  <ConnectionProperties>
+    <Extension>SQL</Extension>
+    <ConnectString>Data Source=172.31.48.15;Initial Catalog=eConfig</ConnectString>
+    <Prompt>Specify a user name and password for data source eConfigDS:</Prompt>
+  </ConnectionProperties>
+  <DataSourceID>af739428-6025-4cba-8f12-d15bc25f516a</DataSourceID>
+</RptDataSource>
