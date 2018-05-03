@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RptDataSource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="eConnectDS">
+  <ConnectionProperties>
+    <Extension>SQL</Extension>
+    <ConnectString>Data Source=172.31.48.15;Initial Catalog=eConnect</ConnectString>
+  </ConnectionProperties>
+  <DataSourceID>1919efe0-3d72-45c7-8b3c-4d50b631efba</DataSourceID>
+</RptDataSource>
