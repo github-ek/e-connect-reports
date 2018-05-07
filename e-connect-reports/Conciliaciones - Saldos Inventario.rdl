@@ -21,53 +21,100 @@
           <QueryParameter Name="@id_cliente">
             <Value>=Parameters!id_cliente.Value</Value>
           </QueryParameter>
+          <QueryParameter Name="@bodega_codigo">
+            <Value>=Parameters!bodega_codigo.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@producto_codigo">
+            <Value>=Parameters!producto_codigo.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@prtstyle">
+            <Value>=Parameters!prtstyle.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@producto_nombre">
+            <Value>=Parameters!producto_nombre.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@estado">
+            <Value>=Parameters!estado.Value</Value>
+          </QueryParameter>
         </QueryParameters>
-        <CommandText>SELECT 
+        <CommandText>;WITH
+cte_00 AS 
+(
+    SELECT 
+         a.id_corte_saldo_inventario
+        ,a.fecha
+        ,a.estado
+        ,a.fecha_corte_cliente
+        ,a.fecha_corte_opl
+        ,a.id_cliente
+
+        ,b.id_bodega
+        ,b.bodega_codigo
+        ,b.id_producto
+        ,b.producto_codigo
+        ,b.id_estado_conciliacion
+        ,b.prtstyle
+
+        ,b.diferencia_opl_cliente
+        ,b.unidades_cliente
+        ,b.unidades_opl
+
+        ,b.unidades_wms
+        ,b.unidades_en_proceso_despacho
+        ,b.valor_unitario
+    FROM dbo.cortes_saldos_inventario a
+    INNER JOIN dbo.conciliaciones_saldos_inventario b ON
+        b.id_corte_saldo_inventario = a.id_corte_saldo_inventario
+    INNER JOIN [eConnect].dbo.clientes c ON
+        c.id_cliente = a.id_cliente
+    WHERE
+        a.fecha = @fecha_corte
+    AND a.id_cliente = @id_cliente
+    AND b.bodega_codigo LIKE '%'+@bodega_codigo+'%'
+    AND b.producto_codigo LIKE '%'+@producto_codigo+'%'
+    AND b.prtstyle LIKE '%'+@prtstyle+'%'
+)
+SELECT
      a.id_corte_saldo_inventario
-    ,c.codigo AS cliente_codigo
     ,a.fecha
     ,a.estado
     ,a.fecha_corte_cliente
     ,a.fecha_corte_opl
+    ,a.id_cliente
 
-    ,b.bodega_codigo
-    ,b.producto_codigo
-    ,COALESCE(d.nombre,'') AS producto_nombre
-    ,COALESCE(e.codigo,'') AS estado_conciliacion
-    ,b.diferencia_opl_cliente
-    ,b.unidades_cliente
-    ,b.unidades_opl
+    ,a.id_bodega
+    ,a.bodega_codigo
+    ,a.id_producto
+    ,a.producto_codigo
+    ,COALESCE(b.nombre,'') AS producto_nombre
+    ,COALESCE(c.codigo,'') AS estado_conciliacion
+    ,a.prtstyle
 
-    ,b.unidades_wms
-    ,b.unidades_en_proceso_despacho
-    ,b.valor_unitario
-    ,b.id_bodega
-FROM dbo.cortes_saldos_inventario a
-INNER JOIN dbo.conciliaciones_saldos_inventario b ON
-    b.id_corte_saldo_inventario = a.id_corte_saldo_inventario
-INNER JOIN [eConnect].dbo.clientes c ON
-    c.id_cliente = a.id_cliente
-LEFT OUTER JOIN [eConnect].dbo.productos d ON
-    d.id_producto = b.id_producto
-LEFT OUTER JOIN dbo.estados_conciliacion e ON
-    e.id_estado_conciliacion = b.id_estado_conciliacion
-WHERE
-    a.fecha = @fecha_corte
-AND a.id_cliente = @id_cliente
+    ,a.diferencia_opl_cliente
+    ,a.unidades_cliente
+    ,a.unidades_opl
+
+    ,a.unidades_wms
+    ,a.unidades_en_proceso_despacho
+    ,a.valor_unitario
+FROM cte_00 a
+LEFT OUTER JOIN [eConnect].dbo.productos b ON
+    b.id_producto = a.id_producto
+INNER JOIN dbo.estados_conciliacion c ON
+    c.id_estado_conciliacion = a.id_estado_conciliacion
+WHERE 1 = 1
+AND COALESCE(b.nombre,'') LIKE '%'+@producto_nombre+'%'
+AND COALESCE(c.nombre,'') LIKE '%'+@estado+'%'
 ORDER BY
-     CASE WHEN b.id_bodega &gt; 0 THEN 1 ELSE 2 END
-    ,b.bodega_codigo
-    ,b.diferencia_opl_cliente DESC
-    ,b.producto_codigo</CommandText>
+     CASE WHEN a.id_bodega &gt; 0 THEN 1 ELSE 2 END
+    ,a.bodega_codigo
+    ,a.diferencia_opl_cliente DESC
+    ,a.producto_codigo</CommandText>
       </Query>
       <Fields>
         <Field Name="id_corte_saldo_inventario">
           <DataField>id_corte_saldo_inventario</DataField>
           <rd:TypeName>System.Int64</rd:TypeName>
-        </Field>
-        <Field Name="cliente_codigo">
-          <DataField>cliente_codigo</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="fecha">
           <DataField>fecha</DataField>
@@ -85,6 +132,10 @@ ORDER BY
           <DataField>fecha_corte_opl</DataField>
           <rd:TypeName>System.DateTime</rd:TypeName>
         </Field>
+        <Field Name="id_cliente">
+          <DataField>id_cliente</DataField>
+          <rd:TypeName>System.Int64</rd:TypeName>
+        </Field>
         <Field Name="bodega_codigo">
           <DataField>bodega_codigo</DataField>
           <rd:TypeName>System.String</rd:TypeName>
@@ -92,6 +143,10 @@ ORDER BY
         <Field Name="producto_codigo">
           <DataField>producto_codigo</DataField>
           <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="id_producto">
+          <DataField>id_producto</DataField>
+          <rd:TypeName>System.Int64</rd:TypeName>
         </Field>
         <Field Name="producto_nombre">
           <DataField>producto_nombre</DataField>
@@ -108,6 +163,10 @@ ORDER BY
         <Field Name="unidades_cliente">
           <DataField>unidades_cliente</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="prtstyle">
+          <DataField>prtstyle</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="unidades_opl">
           <DataField>unidades_opl</DataField>
@@ -225,6 +284,7 @@ ORDER BY
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -239,7 +299,7 @@ ORDER BY
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Producto</Value>
+                                  <Value>SKU</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                     <Color>White</Color>
@@ -275,7 +335,7 @@ ORDER BY
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Descripción</Value>
+                                  <Value>Nombre</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                     <Color>White</Color>
@@ -314,7 +374,7 @@ ORDER BY
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Estado conciliación</Value>
+                                  <Value>Estado Conciliación</Value>
                                   <Style>
                                     <FontFamily>Arial</FontFamily>
                                     <FontWeight>Bold</FontWeight>
@@ -541,7 +601,7 @@ ORDER BY
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Sum(Fields!id_corte_saldo_inventario.Value)</Value>
+                                  <Value>Valor Unitario</Value>
                                   <Style>
                                     <FontFamily>Arial</FontFamily>
                                     <FontWeight>Bold</FontWeight>
@@ -1230,11 +1290,36 @@ ORDER BY
         </DataSetReference>
       </ValidValues>
     </ReportParameter>
+    <ReportParameter Name="bodega_codigo">
+      <DataType>String</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>CEDI</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="producto_codigo">
+      <DataType>String</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>SKU</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="producto_nombre">
+      <DataType>String</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Nombre</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="prtstyle">
+      <DataType>String</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Línea</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="estado">
+      <DataType>String</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Estado Conciliación</Prompt>
+    </ReportParameter>
   </ReportParameters>
   <ReportParametersLayout>
     <GridLayoutDefinition>
-      <NumberOfColumns>2</NumberOfColumns>
-      <NumberOfRows>1</NumberOfRows>
+      <NumberOfColumns>3</NumberOfColumns>
+      <NumberOfRows>3</NumberOfRows>
       <CellDefinitions>
         <CellDefinition>
           <ColumnIndex>0</ColumnIndex>
@@ -1245,6 +1330,31 @@ ORDER BY
           <ColumnIndex>1</ColumnIndex>
           <RowIndex>0</RowIndex>
           <ParameterName>id_cliente</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>2</ColumnIndex>
+          <RowIndex>0</RowIndex>
+          <ParameterName>bodega_codigo</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>0</ColumnIndex>
+          <RowIndex>1</RowIndex>
+          <ParameterName>producto_codigo</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>2</ColumnIndex>
+          <RowIndex>1</RowIndex>
+          <ParameterName>prtstyle</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>1</ColumnIndex>
+          <RowIndex>1</RowIndex>
+          <ParameterName>producto_nombre</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>0</ColumnIndex>
+          <RowIndex>2</RowIndex>
+          <ParameterName>estado</ParameterName>
         </CellDefinition>
       </CellDefinitions>
     </GridLayoutDefinition>
