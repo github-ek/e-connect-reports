@@ -43,28 +43,28 @@
   </DataSets>
   <Reports>
     <ProjectItem>
-      <Name>Conciliaciones - Saldos Cliente.rdl</Name>
-      <FullPath>Conciliaciones - Saldos Cliente.rdl</FullPath>
+      <Name>Saldos Cliente.rdl</Name>
+      <FullPath>Saldos Cliente.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>Conciliaciones - Saldos Inventario.rdl</Name>
-      <FullPath>Conciliaciones - Saldos Inventario.rdl</FullPath>
+      <Name>Saldos Inventario.rdl</Name>
+      <FullPath>Saldos Inventario.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>Conciliaciones - Saldos OPL.rdl</Name>
-      <FullPath>Conciliaciones - Saldos OPL.rdl</FullPath>
+      <Name>Saldos OPL.rdl</Name>
+      <FullPath>Saldos OPL.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>Conciliaciones - Saldos Totales Inventario.rdl</Name>
-      <FullPath>Conciliaciones - Saldos Totales Inventario.rdl</FullPath>
+      <Name>Saldos Totales Inventario.rdl</Name>
+      <FullPath>Saldos Totales Inventario.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Mapas Estados Homologación.rdl</Name>
+      <FullPath>Mapas Estados Homologación.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>egakat-template.rdl</Name>
       <FullPath>egakat-template.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Conciliaciones - Mapas Estados Homologación.rdl</Name>
-      <FullPath>Conciliaciones - Mapas Estados Homologación.rdl</FullPath>
     </ProjectItem>
   </Reports>
   <Configurations>
@@ -103,11 +103,11 @@
         <OutputPath>bin\Release</OutputPath>
         <TargetServerVersion>SSRS2016</TargetServerVersion>
         <TargetServerURL>http://172.31.48.15/reportserver</TargetServerURL>
-        <TargetFolder>e-connect-reports</TargetFolder>
-        <TargetMobileReportFolder>e-connect-reports/Mobile Reports</TargetMobileReportFolder>
-        <TargetDataSourceFolder>e-connect-reports/Data Sources</TargetDataSourceFolder>
-        <TargetDatasetFolder>e-connect-reports/Datasets</TargetDatasetFolder>
-        <TargetReportPartFolder>e-connect-reports/Report Parts</TargetReportPartFolder>
+        <TargetFolder>Conciliaciones</TargetFolder>
+        <TargetMobileReportFolder>Conciliaciones/Mobile Reports</TargetMobileReportFolder>
+        <TargetDataSourceFolder>Conciliaciones/Data Sources</TargetDataSourceFolder>
+        <TargetDatasetFolder>Conciliaciones/Datasets</TargetDatasetFolder>
+        <TargetReportPartFolder>Conciliaciones/Report Parts</TargetReportPartFolder>
       </Options>
     </Configuration>
   </Configurations>

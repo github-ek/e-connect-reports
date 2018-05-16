@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26430.13
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "e-connect-reports", "e-connect-reports\e-connect-reports.rptproj", "{225AFBDE-0A2F-4F12-8BBF-5ECDF814DE98}"
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "e-connect-conciliaciones", "e-connect-reports\e-connect-conciliaciones.rptproj", "{225AFBDE-0A2F-4F12-8BBF-5ECDF814DE98}"
 EndProject
 Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "e-silogtran-reports", "e-silogtran-reports\e-silogtran-reports.rptproj", "{090149E4-BC00-4886-B356-F4F7CFA37671}"
+EndProject
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "e-connect-distribucion-secundaria", "e-connect-distribucion-secundaria\e-connect-distribucion-secundaria.rptproj", "{54BB098A-4F05-4BAF-ABD6-277CAE13E070}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,6 +32,14 @@ Global
 		{090149E4-BC00-4886-B356-F4F7CFA37671}.Release|Default.ActiveCfg = Release
 		{090149E4-BC00-4886-B356-F4F7CFA37671}.Release|Default.Build.0 = Release
 		{090149E4-BC00-4886-B356-F4F7CFA37671}.Release|Default.Deploy.0 = Release
+		{54BB098A-4F05-4BAF-ABD6-277CAE13E070}.Debug|Default.ActiveCfg = Debug
+		{54BB098A-4F05-4BAF-ABD6-277CAE13E070}.Debug|Default.Build.0 = Debug
+		{54BB098A-4F05-4BAF-ABD6-277CAE13E070}.Debug|Default.Deploy.0 = Debug
+		{54BB098A-4F05-4BAF-ABD6-277CAE13E070}.DebugLocal|Default.ActiveCfg = DebugLocal
+		{54BB098A-4F05-4BAF-ABD6-277CAE13E070}.DebugLocal|Default.Build.0 = DebugLocal
+		{54BB098A-4F05-4BAF-ABD6-277CAE13E070}.Release|Default.ActiveCfg = Release
+		{54BB098A-4F05-4BAF-ABD6-277CAE13E070}.Release|Default.Build.0 = Release
+		{54BB098A-4F05-4BAF-ABD6-277CAE13E070}.Release|Default.Deploy.0 = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

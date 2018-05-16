@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RptDataSource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="eIntegrationDS">
+  <ConnectionProperties>
+    <Extension>SQL</Extension>
+    <ConnectString>Data Source=172.31.48.15;Initial Catalog=eIntegration</ConnectString>
+  </ConnectionProperties>
+  <DataSourceID>91c561b2-1873-471a-870b-fbc4e07cbe75</DataSourceID>
+</RptDataSource>
