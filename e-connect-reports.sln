@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26430.13
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "e-connect-conciliaciones", "e-connect-reports\e-connect-conciliaciones.rptproj", "{225AFBDE-0A2F-4F12-8BBF-5ECDF814DE98}"
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "e-conciliaciones-reports", "e-conciliaciones-reports\e-conciliaciones-reports.rptproj", "{962CAEC2-89BF-4804-A33E-A0A664C190BC}"
 EndProject
-Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "e-silogtran-reports", "e-silogtran-reports\e-silogtran-reports.rptproj", "{090149E4-BC00-4886-B356-F4F7CFA37671}"
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "e-connect-cedis", "e-connect-cedis\e-connect-cedis.rptproj", "{43D3A64A-B108-4559-8D94-873E6A3A3E5A}"
 EndProject
-Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "e-connect-distribucion-secundaria", "e-connect-distribucion-secundaria\e-connect-distribucion-secundaria.rptproj", "{54BB098A-4F05-4BAF-ABD6-277CAE13E070}"
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "e-connect-distribucion-secundaria", "e-connect-distribucion-secundaria\e-connect-distribucion-secundaria.rptproj", "{D1040B9C-8E1B-4649-9CBB-BEE86081C746}"
+EndProject
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "e-connect-cortes", "e-connect-cortes\e-connect-cortes.rptproj", "{9C67BE2E-D2D1-46AB-ADE0-1FB91E9D8890}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -16,32 +18,45 @@ Global
 		Release|Default = Release|Default
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{225AFBDE-0A2F-4F12-8BBF-5ECDF814DE98}.Debug|Default.ActiveCfg = Debug
-		{225AFBDE-0A2F-4F12-8BBF-5ECDF814DE98}.Debug|Default.Build.0 = Debug
-		{225AFBDE-0A2F-4F12-8BBF-5ECDF814DE98}.Debug|Default.Deploy.0 = Debug
-		{225AFBDE-0A2F-4F12-8BBF-5ECDF814DE98}.DebugLocal|Default.ActiveCfg = DebugLocal
-		{225AFBDE-0A2F-4F12-8BBF-5ECDF814DE98}.DebugLocal|Default.Build.0 = DebugLocal
-		{225AFBDE-0A2F-4F12-8BBF-5ECDF814DE98}.Release|Default.ActiveCfg = Release
-		{225AFBDE-0A2F-4F12-8BBF-5ECDF814DE98}.Release|Default.Build.0 = Release
-		{225AFBDE-0A2F-4F12-8BBF-5ECDF814DE98}.Release|Default.Deploy.0 = Release
-		{090149E4-BC00-4886-B356-F4F7CFA37671}.Debug|Default.ActiveCfg = Debug
-		{090149E4-BC00-4886-B356-F4F7CFA37671}.Debug|Default.Build.0 = Debug
-		{090149E4-BC00-4886-B356-F4F7CFA37671}.Debug|Default.Deploy.0 = Debug
-		{090149E4-BC00-4886-B356-F4F7CFA37671}.DebugLocal|Default.ActiveCfg = DebugLocal
-		{090149E4-BC00-4886-B356-F4F7CFA37671}.DebugLocal|Default.Build.0 = DebugLocal
-		{090149E4-BC00-4886-B356-F4F7CFA37671}.Release|Default.ActiveCfg = Release
-		{090149E4-BC00-4886-B356-F4F7CFA37671}.Release|Default.Build.0 = Release
-		{090149E4-BC00-4886-B356-F4F7CFA37671}.Release|Default.Deploy.0 = Release
-		{54BB098A-4F05-4BAF-ABD6-277CAE13E070}.Debug|Default.ActiveCfg = Debug
-		{54BB098A-4F05-4BAF-ABD6-277CAE13E070}.Debug|Default.Build.0 = Debug
-		{54BB098A-4F05-4BAF-ABD6-277CAE13E070}.Debug|Default.Deploy.0 = Debug
-		{54BB098A-4F05-4BAF-ABD6-277CAE13E070}.DebugLocal|Default.ActiveCfg = DebugLocal
-		{54BB098A-4F05-4BAF-ABD6-277CAE13E070}.DebugLocal|Default.Build.0 = DebugLocal
-		{54BB098A-4F05-4BAF-ABD6-277CAE13E070}.Release|Default.ActiveCfg = Release
-		{54BB098A-4F05-4BAF-ABD6-277CAE13E070}.Release|Default.Build.0 = Release
-		{54BB098A-4F05-4BAF-ABD6-277CAE13E070}.Release|Default.Deploy.0 = Release
+		{962CAEC2-89BF-4804-A33E-A0A664C190BC}.Debug|Default.ActiveCfg = Debug
+		{962CAEC2-89BF-4804-A33E-A0A664C190BC}.Debug|Default.Build.0 = Debug
+		{962CAEC2-89BF-4804-A33E-A0A664C190BC}.Debug|Default.Deploy.0 = Debug
+		{962CAEC2-89BF-4804-A33E-A0A664C190BC}.DebugLocal|Default.ActiveCfg = DebugLocal
+		{962CAEC2-89BF-4804-A33E-A0A664C190BC}.DebugLocal|Default.Build.0 = DebugLocal
+		{962CAEC2-89BF-4804-A33E-A0A664C190BC}.DebugLocal|Default.Deploy.0 = DebugLocal
+		{962CAEC2-89BF-4804-A33E-A0A664C190BC}.Release|Default.ActiveCfg = Release
+		{962CAEC2-89BF-4804-A33E-A0A664C190BC}.Release|Default.Build.0 = Release
+		{962CAEC2-89BF-4804-A33E-A0A664C190BC}.Release|Default.Deploy.0 = Release
+		{43D3A64A-B108-4559-8D94-873E6A3A3E5A}.Debug|Default.ActiveCfg = Debug
+		{43D3A64A-B108-4559-8D94-873E6A3A3E5A}.Debug|Default.Build.0 = Debug
+		{43D3A64A-B108-4559-8D94-873E6A3A3E5A}.Debug|Default.Deploy.0 = Debug
+		{43D3A64A-B108-4559-8D94-873E6A3A3E5A}.DebugLocal|Default.ActiveCfg = DebugLocal
+		{43D3A64A-B108-4559-8D94-873E6A3A3E5A}.DebugLocal|Default.Build.0 = DebugLocal
+		{43D3A64A-B108-4559-8D94-873E6A3A3E5A}.Release|Default.ActiveCfg = Release
+		{43D3A64A-B108-4559-8D94-873E6A3A3E5A}.Release|Default.Build.0 = Release
+		{43D3A64A-B108-4559-8D94-873E6A3A3E5A}.Release|Default.Deploy.0 = Release
+		{D1040B9C-8E1B-4649-9CBB-BEE86081C746}.Debug|Default.ActiveCfg = Debug
+		{D1040B9C-8E1B-4649-9CBB-BEE86081C746}.Debug|Default.Build.0 = Debug
+		{D1040B9C-8E1B-4649-9CBB-BEE86081C746}.Debug|Default.Deploy.0 = Debug
+		{D1040B9C-8E1B-4649-9CBB-BEE86081C746}.DebugLocal|Default.ActiveCfg = DebugLocal
+		{D1040B9C-8E1B-4649-9CBB-BEE86081C746}.DebugLocal|Default.Build.0 = DebugLocal
+		{D1040B9C-8E1B-4649-9CBB-BEE86081C746}.DebugLocal|Default.Deploy.0 = DebugLocal
+		{D1040B9C-8E1B-4649-9CBB-BEE86081C746}.Release|Default.ActiveCfg = Release
+		{D1040B9C-8E1B-4649-9CBB-BEE86081C746}.Release|Default.Build.0 = Release
+		{D1040B9C-8E1B-4649-9CBB-BEE86081C746}.Release|Default.Deploy.0 = Release
+		{9C67BE2E-D2D1-46AB-ADE0-1FB91E9D8890}.Debug|Default.ActiveCfg = Debug
+		{9C67BE2E-D2D1-46AB-ADE0-1FB91E9D8890}.Debug|Default.Build.0 = Debug
+		{9C67BE2E-D2D1-46AB-ADE0-1FB91E9D8890}.Debug|Default.Deploy.0 = Debug
+		{9C67BE2E-D2D1-46AB-ADE0-1FB91E9D8890}.DebugLocal|Default.ActiveCfg = DebugLocal
+		{9C67BE2E-D2D1-46AB-ADE0-1FB91E9D8890}.DebugLocal|Default.Build.0 = DebugLocal
+		{9C67BE2E-D2D1-46AB-ADE0-1FB91E9D8890}.Release|Default.ActiveCfg = Release
+		{9C67BE2E-D2D1-46AB-ADE0-1FB91E9D8890}.Release|Default.Build.0 = Release
+		{9C67BE2E-D2D1-46AB-ADE0-1FB91E9D8890}.Release|Default.Deploy.0 = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9A05B5E5-883E-4513-B9A1-D58417EC4032}
 	EndGlobalSection
 EndGlobal

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSet Name="DataSet1">
+    <Query>
+      <DataSourceReference>eIntegrationDS</DataSourceReference>
+      <DataSetParameters>
+        <DataSetParameter Name="@id_grupo_tipo_archivo">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+      </DataSetParameters>
+      <CommandText>SELECT id_tipo_archivo,codigo 
+FROM tipos_archivo 
+WHERE id_grupo_tipo_archivo = @id_grupo_tipo_archivo 
+ORDER BY codigo</CommandText>
+    </Query>
+    <Fields>
+      <Field Name="id_tipo_archivo">
+        <DataField>id_tipo_archivo</DataField>
+        <rd:TypeName>System.Int64</rd:TypeName>
+      </Field>
+      <Field Name="codigo">
+        <DataField>codigo</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>

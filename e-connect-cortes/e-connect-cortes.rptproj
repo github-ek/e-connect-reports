@@ -8,10 +8,10 @@
     <OverwriteDataSources>False</OverwriteDataSources>
     <TargetServerVersion>SSRS2016</TargetServerVersion>
     <Platform>Win32</Platform>
-    <TargetReportFolder>Conciliaciones</TargetReportFolder>
-    <TargetDatasetFolder>Conciliaciones/Datasets</TargetDatasetFolder>
-    <TargetDatasourceFolder>Conciliaciones/Data Sources</TargetDatasourceFolder>
-    <TargetReportPartFolder>Conciliaciones/Report Parts</TargetReportPartFolder>
+    <TargetReportFolder>e-connect-cortes</TargetReportFolder>
+    <TargetDatasetFolder>Datasets</TargetDatasetFolder>
+    <TargetDatasourceFolder>Data Sources</TargetDatasourceFolder>
+    <TargetReportPartFolder>Report Parts</TargetReportPartFolder>
     <TargetServerURL>http://localhost/reportserver</TargetServerURL>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'DebugLocal' ">
@@ -22,7 +22,7 @@
     <OverwriteDataSources>False</OverwriteDataSources>
     <TargetServerVersion>SSRS2016</TargetServerVersion>
     <Platform>Win32</Platform>
-    <TargetReportFolder>e-conciliaciones-reports</TargetReportFolder>
+    <TargetReportFolder>e-connect-cortes</TargetReportFolder>
     <TargetDatasetFolder>Datasets</TargetDatasetFolder>
     <TargetDatasourceFolder>Data Sources</TargetDatasourceFolder>
     <TargetReportPartFolder>Report Parts</TargetReportPartFolder>
@@ -32,14 +32,14 @@
     <FullPath>Release</FullPath>
     <OutputPath>bin\Release</OutputPath>
     <ErrorLevel>2</ErrorLevel>
-    <OverwriteDatasets>False</OverwriteDatasets>
-    <OverwriteDataSources>False</OverwriteDataSources>
+    <OverwriteDatasets>True</OverwriteDatasets>
+    <OverwriteDataSources>True</OverwriteDataSources>
     <TargetServerVersion>SSRS2016</TargetServerVersion>
     <Platform>Win32</Platform>
-    <TargetReportFolder>Conciliaciones</TargetReportFolder>
-    <TargetDatasetFolder>Conciliaciones/Datasets</TargetDatasetFolder>
-    <TargetDatasourceFolder>Conciliaciones/Data Sources</TargetDatasourceFolder>
-    <TargetReportPartFolder>Conciliaciones/Report Parts</TargetReportPartFolder>
+    <TargetReportFolder>Cortes</TargetReportFolder>
+    <TargetDatasetFolder>Cortes/Datasets</TargetDatasetFolder>
+    <TargetDatasourceFolder>Cortes/Data Sources</TargetDatasourceFolder>
+    <TargetReportPartFolder>Cortes/Report Parts</TargetReportPartFolder>
     <TargetServerURL>http://reportes.egakat.com/reportserver</TargetServerURL>
   </PropertyGroup>
   <PropertyGroup>
@@ -50,25 +50,14 @@
   </PropertyGroup>
   <ItemGroup>
     <DataSet Include="BodegasPorUsuario.rsd" />
-    <DataSet Include="ClientesConciliacion.rsd" />
-    <DataSet Include="MapasEstadosConciliacion.rsd" />
+    <DataSet Include="ClientesPorUsuario.rsd" />
   </ItemGroup>
   <ItemGroup>
-    <DataSource Include="eConciliacionesDS.rds" />
-    <DataSource Include="eConfigDS.rds" />
-    <DataSource Include="eConnectDS.rds" />
-    <DataSource Include="eIntegrationDS.rds" />
     <DataSource Include="eSecurityDS.rds" />
-    <DataSource Include="eStageDS.rds" />
-    <DataSource Include="eWmsDS.rds" />
+    <DataSource Include="SateliteDS.rds" />
   </ItemGroup>
   <ItemGroup>
-    <Report Include="egakat-template.rdl" />
-    <Report Include="Mapas Estados Homologación.rdl" />
-    <Report Include="Saldos Cliente.rdl" />
-    <Report Include="Saldos Inventario.rdl" />
-    <Report Include="Saldos OPL.rdl" />
-    <Report Include="Saldos Totales Inventario.rdl" />
+    <Report Include="Solicitudes Por CeDi.rdl" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Reporting Services\Microsoft.ReportingServices.MSBuilder.targets" />
 </Project>
