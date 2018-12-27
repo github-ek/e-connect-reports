@@ -11,6 +11,8 @@ Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "e-connect-distribucion-secu
 EndProject
 Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "e-connect-cortes", "e-connect-cortes\e-connect-cortes.rptproj", "{9C67BE2E-D2D1-46AB-ADE0-1FB91E9D8890}"
 EndProject
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "Consulta-de-canales", "Consulta-de-canales\Consulta-de-canales.rptproj", "{EC6CE4C1-DB2C-41E3-B6A1-76A662CE36C6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Default = Debug|Default
@@ -52,6 +54,14 @@ Global
 		{9C67BE2E-D2D1-46AB-ADE0-1FB91E9D8890}.Release|Default.ActiveCfg = Release
 		{9C67BE2E-D2D1-46AB-ADE0-1FB91E9D8890}.Release|Default.Build.0 = Release
 		{9C67BE2E-D2D1-46AB-ADE0-1FB91E9D8890}.Release|Default.Deploy.0 = Release
+		{EC6CE4C1-DB2C-41E3-B6A1-76A662CE36C6}.Debug|Default.ActiveCfg = Debug
+		{EC6CE4C1-DB2C-41E3-B6A1-76A662CE36C6}.Debug|Default.Build.0 = Debug
+		{EC6CE4C1-DB2C-41E3-B6A1-76A662CE36C6}.Debug|Default.Deploy.0 = Debug
+		{EC6CE4C1-DB2C-41E3-B6A1-76A662CE36C6}.DebugLocal|Default.ActiveCfg = DebugLocal
+		{EC6CE4C1-DB2C-41E3-B6A1-76A662CE36C6}.DebugLocal|Default.Build.0 = DebugLocal
+		{EC6CE4C1-DB2C-41E3-B6A1-76A662CE36C6}.Release|Default.ActiveCfg = Release
+		{EC6CE4C1-DB2C-41E3-B6A1-76A662CE36C6}.Release|Default.Build.0 = Release
+		{EC6CE4C1-DB2C-41E3-B6A1-76A662CE36C6}.Release|Default.Deploy.0 = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
