@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<RptDataSource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="eSecurityDS">
+<RptDataSource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="eSecurity">
   <ConnectionProperties>
     <Extension>SQL</Extension>
     <ConnectString>Data Source=172.31.48.15;Initial Catalog=eSecurity</ConnectString>
   </ConnectionProperties>
-  <DataSourceID>21bd7ffb-fdf9-45f4-81eb-c1dc5e7c3f44</DataSourceID>
+  <DataSourceID>5667dacd-486d-405d-b10f-5d6ae4666dc2</DataSourceID>
 </RptDataSource>

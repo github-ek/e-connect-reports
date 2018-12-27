@@ -51,6 +51,7 @@
   <ItemGroup>
     <DataSet Include="BodegasPorUsuario.rsd" />
     <DataSet Include="ClientesConciliacion.rsd" />
+    <DataSet Include="ClientesPorUsuario.rsd" />
     <DataSet Include="MapasEstadosConciliacion.rsd" />
   </ItemGroup>
   <ItemGroup>
